@@ -23,7 +23,22 @@ services:
     volumes:
       - redis:/var/lib/redis
     networks:
-      - charlie  
+      - charlie
+  
+  user_backend:
+    image: user_backend
+    build:
+        context: ./
+        dockerfile: ./docker/user/Dockerfile
+        args:
+          APPENV: 'local'
+    ports:
+        - '${APP_PORT:-4001}:4001'
+    volumes:
+        - './services/user/:/usr/src/app/'
+    command: ["npm", "run", "start:dev"]
+    networks:
+        - charlie    
 
 networks: 
     charlie:
