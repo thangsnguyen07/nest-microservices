@@ -1,0 +1,30 @@
+{
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "tabWidth": 2,
+  "semi": false,
+  "printWidth": 100,
+  "bracketSpacing": true,
+  "arrowParens": "always",
+  "endOfLine": "auto",
+  "importOrder": [
+    "^(nestjs/(.*)$)|^(nestjs$)|^nestjs-(.*)$",
+    "^express$|express/(.*)$",
+    "^@controllers/(.*)$",
+    "^@common/(.*)$",
+    "^@models/(.*)$",
+    "^@repository/(.*)$",
+    "^@services/(.*)$",
+    "^@middlewares/(.*)$",
+    "^@decorators/(.*)$",
+    "^@utils/(.*)$",
+    "^constants/(.*)$",
+    "^[./]"
+  ],
+  "importOrderParserPlugins": [
+    "typescript",
+    "[\"decorators-legacy\", {\"decoratorsBeforeExport\": true}]"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
+}

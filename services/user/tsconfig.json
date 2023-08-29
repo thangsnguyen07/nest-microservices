@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "ES2021",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "strictBindCallApply": true,
+    "forceConsistentCasingInFileNames": false,
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+            "@auth/*": ["src/auth/*"],
+            "@common/*": ["src/common/*"],
+            "@controllers/*": ["src/controllers/*"],
+            "@services/*": ["src/services/*"],
+            "@dto/*": ["src/dto/*"],
+            "@models/*": ["src/models/*"],
+            "@middleware/*": ["src/middleware/*"],
+            "@interfaces/*": ["src/interfaces/*"],
+            "@decorators/*": ["src/decorators/*"],
+            "@utils/*": ["src/utils/*"],
+        },
+  }
+}
