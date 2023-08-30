@@ -30,15 +30,16 @@ services:
     build:
         context: ./
         dockerfile: ./docker/user/Dockerfile
-        args:
-          APPENV: 'local'
+        target: development
+    env_file:
+      - ./services/user/.env
     ports:
         - '${APP_PORT:-4001}:4001'
+    command: npm run start:dev
     volumes:
-        - './services/user/:/usr/src/app/'
-    command: ["npm", "run", "start:dev"]
+      - './services/user/:/usr/src/app/'
     networks:
-        - charlie    
+        - charlie
 
 networks: 
     charlie:
