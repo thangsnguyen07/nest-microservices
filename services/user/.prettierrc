@@ -8,8 +8,9 @@
   "arrowParens": "always",
   "endOfLine": "auto",
   "importOrder": [
-    "^(nestjs/(.*)$)|^(nestjs$)|^nestjs-(.*)$",
+    "^@(nestjs/(.*)$)|^@(nestjs$)|^@nestjs-(.*)$",
     "^express$|express/(.*)$",
+    "^@charliexndt/(.*)$",
     "^@controllers/(.*)$",
     "^@common/(.*)$",
     "^@models/(.*)$",
@@ -21,6 +22,7 @@
     "^constants/(.*)$",
     "^[./]"
   ],
+  "plugins": ["@trivago/prettier-plugin-sort-imports"],
   "importOrderParserPlugins": [
     "typescript",
     "[\"decorators-legacy\", {\"decoratorsBeforeExport\": true}]"
